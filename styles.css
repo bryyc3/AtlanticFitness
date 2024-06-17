@@ -1,0 +1,77 @@
+*,
+* ::before,
+*::after{
+    box-sizing: border-box;
+}
+*{
+    margin: 0px;
+    padding:0px;
+}
+
+.home_img_cont{
+    display: flex;
+    height: 820px;
+    max-width: fit-content;
+}
+.court{
+    border-left: solid 9px rgb(42, 89, 155);
+}
+.logo{
+    height: 200px;
+}
+.atlantic_text{
+    position: absolute;
+    margin-top: 100px;
+    color: azure;
+}
+h1{
+    font-family: "League Spartan", sans-serif;
+    font-weight: 700;
+    font-size: 5em;
+}
+.fitness_title{
+    margin-left: 200px;
+}
+h2{
+    font-family: "Lustria", serif;
+    font-weight: 200;
+    font-size: 2.3em;
+    margin-left: 10px;
+}
+
+
+.popout_menu_button{
+    height: 70px;
+    background-color: rgb(42, 89, 155);
+    border-radius: 25%;
+    border: none;
+    color: azure;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.popout_menu{
+    position: absolute;
+    background-color: rgb(42, 89, 155);
+    height: 820px;
+    width: 520px;
+    margin-left: 522px;
+    text-align: center;
+    display: none;
+}
+.close_menu{
+    display: none;
+}
+ul{
+    color: azure;
+    font-size: 3em;
+    padding: 40px;
+    list-style: none;
+    margin-top: 50%;
+}
+li{
+    margin-bottom: 20px;
+}
+
+.gym_images{
+    display: flex;
+}
