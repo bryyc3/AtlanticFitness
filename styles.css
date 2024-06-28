@@ -7,27 +7,33 @@
     margin: 0px;
     padding:0px;
 }
-
+html{
+    background-image: url("/images/gymbackground.png.PNG");
+}
+.title_menu_slides_cont{
+    display: flex;
+}
+.machines_background{
+    padding-top: 150px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
 .home_img_cont{
     display: flex;
-    height: 820px;
+    height: fit-content;
     max-width: fit-content;
 }
-.court{
-    border-left: solid 9px rgb(42, 89, 155);
-}
 .logo{
-    height: 200px;
+    height: 170px;
 }
 .atlantic_text{
-    position: absolute;
-    margin-top: 100px;
+    display: inline;
     color: azure;
 }
 h1{
     font-family: "League Spartan", sans-serif;
     font-weight: 700;
-    font-size: 5em;
+    font-size: 4em;
 }
 .fitness_title{
     margin-left: 200px;
@@ -35,43 +41,63 @@ h1{
 h2{
     font-family: "Lustria", serif;
     font-weight: 200;
-    font-size: 2.3em;
-    margin-left: 10px;
+    font-size: 2em;
 }
 
-
-.popout_menu_button{
-    height: 70px;
-    background-color: rgb(42, 89, 155);
-    border-radius: 25%;
-    border: none;
-    color: azure;
-    margin-left: 5px;
-    cursor: pointer;
+.menu_symbol{
+    font-size: 24px;
 }
 .popout_menu{
-    position: absolute;
-    background-color: rgb(42, 89, 155);
+    background-color: rgb(21, 70, 138);
     height: 820px;
-    width: 520px;
-    margin-left: 522px;
+    width: 220px;
     text-align: center;
-    display: none;
-}
-.close_menu{
-    display: none;
-}
-ul{
-    color: azure;
-    font-size: 3em;
-    padding: 40px;
-    list-style: none;
-    margin-top: 50%;
-}
-li{
-    margin-bottom: 20px;
+    display: block;
+    margin-left: -20px;
+    box-shadow: 2px 5px 10px 5px rgba(8, 46, 99, 0.988) inset;
 }
 
-.gym_images{
-    display: flex;
+ul{
+    font-size: 2.8em;
+    padding: 30px;
+    list-style: none;
+    margin-top: 70%;
+    white-space: nowrap;
+}
+li{
+    margin-bottom: 40px;
+
+}
+a{
+    text-decoration: none;
+    color: azure;
+    position: relative;
+}
+a::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: azure;
+    opacity: 1;
+    transition: opacity 300ms, transform 300ms;
+    transform: scale(0);
+    transform-origin: center;
+  }
+a:hover::after, a:focus::after{
+    transform: scale(1);
+}
+
+.slideshow{
+    margin-top: 70px;
+    text-align: center;
+    color: azure;
+    padding: 50px;
+}
+.gympic{
+    height: 500px;
+    width: 600px;
+    margin: auto;
 }
