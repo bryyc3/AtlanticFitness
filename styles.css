@@ -18,22 +18,19 @@ html{
     padding-left: 30px;
     padding-right: 30px;
 }
-.home_img_cont{
-    display: flex;
-    height: fit-content;
-    max-width: fit-content;
-}
+
 .logo{
     height: 170px;
 }
 .atlantic_text{
     display: inline;
-    color: azure;
+    
 }
 h1{
     font-family: "League Spartan", sans-serif;
     font-weight: 700;
     font-size: 4em;
+    color: azure;
 }
 .fitness_title{
     margin-left: 200px;
@@ -42,19 +39,48 @@ h2{
     font-family: "Lustria", serif;
     font-weight: 200;
     font-size: 2em;
+    color: azure;
 }
-
-.menu_symbol{
-    font-size: 24px;
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+.fade_in{ 
+    animation: fadeIn 3s; 
 }
+/********************* menu*********************/
 .popout_menu{
     background-color: rgb(21, 70, 138);
-    height: 820px;
-    width: 220px;
+    height: 100vh;
+    width: 225px;
     text-align: center;
-    display: block;
     margin-left: -20px;
     box-shadow: 2px 5px 10px 5px rgba(8, 46, 99, 0.988) inset;
+}
+.tab_menu{
+    margin: auto;
+    width: 100vw;
+    height: 10vh;
+}
+.tab_list{
+    margin-top: 0;
+    padding: 10px;
+    list-style: none;
+}
+.tab_item{
+    display: inline;
+    margin-left: 5vw;
+    position: relative;
+}
+.tab_btn{
+    border: none;
+    background: none;
+    color: azure;
+    cursor: pointer;
+    font-size: 1em;
+    font-family: "Lustria", serif;
+    font-weight: 600;
+    position: relative;
 }
 
 ul{
@@ -66,14 +92,14 @@ ul{
 }
 li{
     margin-bottom: 40px;
-
 }
 a{
     text-decoration: none;
     color: azure;
     position: relative;
 }
-a::after {
+
+.tab::after {
     content: '';
     position: absolute;
     height: 2px;
@@ -86,9 +112,15 @@ a::after {
     transform: scale(0);
     transform-origin: center;
   }
-a:hover::after, a:focus::after{
+.tab:hover::after, .tab:focus::after{
     transform: scale(1);
 }
+.tab_active::after, .underline::after{
+    transform: scale(1);
+}
+/********************* menu*********************/
+
+
 
 .slideshow{
     margin-top: 70px;
@@ -96,8 +128,178 @@ a:hover::after, a:focus::after{
     color: azure;
     padding: 50px;
 }
-.gympic{
-    height: 500px;
-    width: 600px;
+.gympic, .google_map{
+    height: 50vh;
+    width: 40vw;
     margin: auto;
+}
+
+/*********************** about page ***************/
+.about_item{
+    font-size: .47em;
+}
+.about_main_content{
+    padding: 40px;
+    display: none;
+}
+.hours_details{
+    color: azure;
+    font-size: 1em;
+    text-align: center;
+    display: none;
+    margin-top: 15%;
+    margin-bottom: 15%;
+}
+.hours_text{
+    margin:auto;
+}
+.active{
+    display:flex;
+}
+.atlantic_building{
+    height: 72vh;
+    width: 50vw;
+
+}
+.overview{
+    background-color: rgb(21, 70, 138);
+    color: azure;
+    margin: auto;
+    box-shadow: 2px 5px 10px 5px rgba(8, 46, 99, 0.988) inset;
+    padding: 20px;
+    font-size: 1.2em;
+    font-weight: 200;
+}
+.about_tabs{
+    text-align: center;
+    font-size: 2em;
+    padding: none;
+    list-style: none;
+    margin-top: 0;
+    white-space: wrap;
+    font-weight: 600;
+}
+
+/*********************** about page ***************/
+
+/*********************** gallery page ***************/
+.slides_arrow_wrapper{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: 5%;
+}
+.arrow{
+    color: white; 
+    font-size: 5em;
+}
+.icon{
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: transform 200ms;
+    max-height: fit-content;
+    margin: auto;
+}
+.icon:hover,
+.icon:focus-visible{
+    transform: translateY(-.75rem);
+}
+.slide_img{
+    height: 70vh;
+    width: 70vw;
+  
+}
+/*********************** gallery page ***************/
+@media(max-width: 500px){
+    .title_menu_slides_cont{
+       flex-wrap:wrap;
+       padding: auto;
+    }
+    .machines_background{
+        margin-top: 10px;
+        padding: 50px;
+        max-height: fit-content;
+    }
+    .logo{
+        height:80px;
+    }
+    h1{
+        font-size: 2.5em;
+    }
+    .fitness_title{
+        margin-left: 120px;
+    }
+    h2{
+        font-size: 1.3em;
+    }
+    .popout_menu{
+        margin-left: auto;
+        width: 100vw;
+        height: 5vh;
+        display: block;
+        position: absolute;
+    }
+    .menu_btn{
+        display: block;
+    }
+    ul{
+        margin-top: 0;
+        padding: 10px;
+        font-size: 1.3em;
+        list-style: none;
+    }
+    li{
+        margin-bottom: 0;
+        display: inline-block;
+        margin-left: 5vw;
+    }
+    .slideshow{
+        padding: 10px;
+        margin-top: 0;
+    }
+    .gympic, .google_map{
+        height: 30vh;
+        width: 80vw;
+        margin-bottom: 30px;
+    }
+    .about_main_content{
+        flex-wrap: wrap;
+    }
+    .atlantic_building{
+        width: 100%;
+    }
+    .about_tabs{
+        margin-top: 0;
+        padding: 0px;
+        font-size: 1.3em;
+    }
+    .tab_btn{
+        display: block;
+        max-width: fit-content;
+    }
+    .hours_text{
+        margin-top: 25%;
+    }
+    .slides_arrow_wrapper{
+        padding: 20%;
+    }
+    .slide_img{
+        height: 50vh;
+        width: 80vw
+    }
+    .icon{
+        font-size: 3em;
+    }
+}
+@media(max-width: 932px) and (max-height: 430px){
+    .popout_menu{
+        margin-left: auto;
+        height: 150vh;
+    }
+    .tab_menu{
+       height: 20vh; 
+       font-size: .8em;
+    }
+    
 }
