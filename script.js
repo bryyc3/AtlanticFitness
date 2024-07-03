@@ -8,10 +8,10 @@ function Tab(href, src, alt, header, description){
     this.header = header;
     this.description = description;
 }
-const home = new Tab('href="index.html"', "/images/IMG_4134.jpg", "Fitness center building", "Come Check Us Out!", "We are located at 31 Shove St, Tiverton, Rhode Island");
-const about = new Tab('href="about.html"', "/images/silversnkrs.JPG", "Silver sneakers fitness program", "Membership Specials, Hours and More", "We offer Silver Sneakers to our members who fit the criteria!<br>Find out about membership deals and more by clicking here or the About Us tab");
-const gallery = new Tab('href="gallery.html"', "/images/main_area4.JPG", "Workout area", "Take A Mini Tour!", "See what you're in for and what our facility offers in the Gallery tab");
-const contact = new Tab('href="contact.html"', "/images/support.jpeg", "Contact us", "Always Here if You Need Us", "Speak with one of our staff members for assitance with any questions you may have<br>You can reach us at: (401) 624-3440");
+const home = new Tab('href="index.html"', "images/IMG_4134.jpg", "Fitness center building", "Come Check Us Out!", "We are located at 31 Shove St, Tiverton, Rhode Island");
+const about = new Tab('href="about.html"', "images/silversnkrs.JPG", "Silver sneakers fitness program", "Membership Specials, Hours and More", "We offer Silver Sneakers to our members who fit the criteria!<br>Find out about membership deals and more by clicking here or the About Us tab");
+const gallery = new Tab('href="gallery.html"', "images/main_area4.JPG", "Workout area", "Take A Mini Tour!", "See what you're in for and what our facility offers in the Gallery tab");
+const contact = new Tab('href="contact.html"', "images/support.jpeg", "Contact us", "Always Here if You Need Us", "Speak with one of our staff members for assitance with any questions you may have<br>You can reach us at: (401) 624-3440");
 
 const images = ["images/machine_room.JPG", "images/machine_room2.JPG",
                 "images/machine_room3.JPG", "images/machine_room4.JPG", 
