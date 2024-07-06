@@ -7,8 +7,6 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Lustria&display=swap" rel="stylesheet"> 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />  
         <link rel="shortcut icon" type="image/PNG" href="/images/logo.PNG">
@@ -24,10 +22,29 @@
                     <li class="tab_item"><a href="contact.html" class="tab" id="3">Contact</a></li>
                 </ul>
             </div>
-            <div class="slides_arrow_wrapper">
-                <button class = "icon material-symbols-outlined arrow" onclick="arrowClicked('-')">arrow_left</button>
-                <img src = 'images/machine_room.JPG' id = "slide" class="slide_img">
-                <button class = "icon material-symbols-outlined arrow" onclick="arrowClicked('+')">arrow_right</button>
+            <div class="gallery_container">
+                <h1 class="gallery_photos_title">Weights and Machines</h1>
+                <div class="slides_arrow_wrapper">
+                    <button class = "icon material-symbols-outlined arrow" onclick="arrowClicked('-','weights')">arrow_left</button>
+                    <img src = 'images/machine_room.JPG' id = "weights" class="slide_img">
+                    <button class = "icon material-symbols-outlined arrow" onclick="arrowClicked('+','weights')">arrow_right</button>
+                </div>
+            </div>
+            <div class="gallery_container">
+                <h1 class="gallery_photos_title">Cardio and Track</h1>
+                <div class="slides_arrow_wrapper">
+                    <button class = "icon material-symbols-outlined arrow" onclick="arrowClicked('-','cardio')">arrow_left</button>
+                    <img src = 'images/upstairs1.JPG' id = "cardio" class="slide_img">
+                    <button class = "icon material-symbols-outlined arrow" onclick="arrowClicked('+','cardio')">arrow_right</button>
+                </div>
+            </div>
+            <div class="gallery_container">
+                <h1 class="gallery_photos_title">Basketball Court</h1>
+                <div class="slides_arrow_wrapper">
+                    <button class = "icon material-symbols-outlined arrow" onclick="arrowClicked('-','court')">arrow_left</button>
+                    <img src = 'images/court1.JPG' id = "court" class="slide_img">
+                    <button class = "icon material-symbols-outlined arrow" onclick="arrowClicked('+','court')">arrow_right</button>
+                </div>
             </div>
         </main>
     </body>

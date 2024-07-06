@@ -1,6 +1,6 @@
 
 
-/*************************** initialize tab ojects and what they contain ***************************/
+/*************************** initialize tab ojects and gallery objects ***************************/
 function Tab(href, src, alt, header, description){
     this.href = href;
     this.src = src;
@@ -8,29 +8,45 @@ function Tab(href, src, alt, header, description){
     this.header = header;
     this.description = description;
 }
+function imageDisplay(array, maxImages, slideNum){
+    this.array = array;
+    this.maxImages = maxImages;
+    this.slideNum = slideNum;
+}
+
+
+const weightsImages = ["images/machine_room.JPG", "images/machine_room2.JPG",
+                        "images/machine_room3.JPG", "images/machine_room4.JPG", 
+                        "images/middle_area1.JPG","images/middle_area2.JPG", 
+                        "images/main_area1.JPG", "images/main_area2.JPG", 
+                        "images/main_area3.JPG", "images/main_area4.JPG", 
+                        "images/main_area5.JPG", "images/legs_area1.JPG", 
+                        "images/legs_area2.JPG", "images/legs_area3.JPG", 
+                        "images/nopain.JPG", "images/limitless.jpg"];
+const courtImages = ["images/court1.JPG", "images/court2.JPG"];
+const cardioImages = ["images/upstairs1.JPG", "images/stairs.JPG", 
+                      "images/dont_quit.JPG", "images/dont_quit2.JPG"]
+let weightsMaxImages = (weightsImages.length - 1);
+let courtMaxImages = (courtImages.length - 1);
+let cardioMaxImages = (cardioImages.length - 1);
+let weightsSlideNum = 0;
+let courtSlideNum = 0;
+let cardioSlideNum = 0; //gallery object information 
+
+
 const home = new Tab('href="index.html"', "images/IMG_4134.jpg", "Fitness center building", "Come Check Us Out!", "We are located at 31 Shove St, Tiverton, Rhode Island");
 const about = new Tab('href="about.html"', "images/silversnkrs.JPG", "Silver sneakers fitness program", "Membership Specials, Hours and More", "We offer Silver Sneakers to our members who fit the criteria!<br>Find out about membership deals and more by clicking here or the About Us tab");
 const gallery = new Tab('href="gallery.html"', "images/main_area4.JPG", "Workout area", "Take A Mini Tour!", "See what you're in for and what our facility offers in the Gallery tab");
 const contact = new Tab('href="contact.html"', "images/support.jpeg", "Contact us", "Always Here if You Need Us", "Speak with one of our staff members for assitance with any questions you may have<br>You can reach us at: (401) 624-3440");
 
-const images = ["images/machine_room.JPG", "images/machine_room2.JPG",
-                "images/machine_room3.JPG", "images/machine_room4.JPG", 
-                "images/middle_area1.JPG","images/middle_area2.JPG", 
-                "images/main_area1.JPG","images/court1.JPG", 
-                "images/court2.JPG", "images/main_area2.JPG", 
-                "images/main_area3.JPG", "images/main_area4.JPG", 
-                "images/main_area5.JPG", "images/legs_area1.JPG", 
-                "images/legs_area2.JPG", "images/legs_area3.JPG", 
-                "images/stairs.JPG", "images/upstairs1.JPG", 
-                "images/dont_quit.JPG", "images/dont_quit2.JPG",
-                "images/nopain.JPG", "images/limitless.jpg"];
-let maximumImages = (images.length - 1);
-let slideNum = 0;
-
-/*************************** initialize tab ojects and what they contain ***************************/
+const weights = new imageDisplay(weightsImages, weightsMaxImages, weightsSlideNum);
+const cardio = new imageDisplay(cardioImages, cardioMaxImages, cardioSlideNum);
+const court = new imageDisplay(courtImages, courtMaxImages, courtSlideNum);
 
 const tabs = [home, about, gallery, contact];//array of all tabs on homescreen
 let index = 0;//index for going through array
+/*************************** initialize tab ojects and what they contain ***************************/
+
 
 
 /*************************** homescreen functions ***************************/
@@ -94,6 +110,7 @@ function changeAboutTab(tabNum){
     let hoursCont = document.getElementById("hours_cont");
     let membershipCont = document.getElementById("membership_cont");
     let trainersCont = document.getElementById("trainers_cont");
+
     if(tabNum === 0){
         overview.classList.add("underline");
         hours.classList.remove("underline");
@@ -137,34 +154,50 @@ function changeAboutTab(tabNum){
         hoursCont.classList.remove("active");
         membershipCont.classList.remove("active");
         trainersCont.classList.add("active");
-    }
+    }//depending on which tab was pressed, 
+     //remove the display of all other tabs and only display selected tab content
 }
 /*************************** about screen functions ***************************/
 
 
 /*************************** gallery screen functions ***************************/
-function arrowClicked(operator){
-    if(slideNum == 0 && operator == '-'){
-        slideNum = maximumImages;
-        document.getElementById("slide").src = `${images[slideNum]}`;
-        console.log(slideNum);
+function arrowClicked(operator, id){
+    if(id === "weights"){
+        let identifier = document.getElementById(`${id}`)
+        changeSlide(operator, weights, identifier);
     }
-    else if(slideNum == maximumImages && operator == '+'){
-        slideNum = 0;
-        document.getElementById("slide").src = `${images[slideNum]}`;
-        console.log(slideNum);
+    if(id === "cardio"){
+        let identifier = document.getElementById(`${id}`)
+        changeSlide(operator, cardio, identifier);
     }
-    else if(slideNum != maximumImages && operator == '+'){
-        slideNum += 1;
-        document.getElementById("slide").src = `${images[slideNum]}`;
-        console.log(slideNum);
+    if(id === "court"){
+        let identifier = document.getElementById(`${id}`)
+        changeSlide(operator, court, identifier);
     }
-    else if(slideNum != 0 && operator == '-'){
-        slideNum -= 1;
-        document.getElementById("slide").src = `${images[slideNum]}`;
-        console.log(slideNum);
+}//when arrow is clicked, determine which set of arrows was clicked 
+ //send content specific info to the function that will change to the next img 
+
+function changeSlide(operator, typeDisplay, identifier){
+    
+    if(typeDisplay.slideNum == 0 && operator == '-'){
+        typeDisplay.slideNum = typeDisplay.maxImages;
+        identifier.src = `${typeDisplay.array[typeDisplay.slideNum]}`;
     }
-}
+    else if(typeDisplay.slideNum == typeDisplay.maxImages && operator == '+'){
+        typeDisplay.slideNum = 0;
+        identifier.src = `${typeDisplay.array[typeDisplay.slideNum]}`;
+    }
+    else if(typeDisplay.slideNum != typeDisplay.maxImages && operator == '+'){
+        typeDisplay.slideNum += 1;
+        identifier.src = `${typeDisplay.array[typeDisplay.slideNum]}`;
+    }
+    else if(typeDisplay.slideNum != 0 && operator == '-'){
+        typeDisplay.slideNum -= 1;
+        identifier.src = `${typeDisplay.array[typeDisplay.slideNum]}`;
+    }
+}//change specific image display's image 
+
+
 /*************************** gallery screen functions ***************************/
 
 

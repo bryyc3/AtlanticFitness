@@ -50,7 +50,7 @@ h2{
 }
 /********************* menu*********************/
 .popout_menu{
-    background-color: rgb(21, 70, 138);
+    background: linear-gradient(125deg, rgb(43, 96, 170), rgb(15, 57, 117), rgb(38, 120, 233));
     height: 100vh;
     width: 225px;
     text-align: center;
@@ -66,6 +66,8 @@ h2{
     margin-top: 0;
     padding: 10px;
     list-style: none;
+    font-size: 2.8em;
+    white-space: nowrap;
 }
 .tab_item{
     display: inline;
@@ -83,14 +85,14 @@ h2{
     position: relative;
 }
 
-ul{
+.main_tabs{
     font-size: 2.8em;
     padding: 30px;
     list-style: none;
     margin-top: 70%;
     white-space: nowrap;
 }
-li{
+.main_tab_item{
     margin-bottom: 40px;
 }
 a{
@@ -139,7 +141,7 @@ a{
     font-size: .47em;
 }
 .about_main_content{
-    padding: 40px;
+    padding: 2%;
     display: none;
 }
 .hours_details{
@@ -159,10 +161,9 @@ a{
 .atlantic_building{
     height: 72vh;
     width: 50vw;
-
 }
 .overview{
-    background-color: rgb(21, 70, 138);
+    background: linear-gradient(125deg, rgb(43, 96, 170), rgb(15, 57, 117), rgb(38, 120, 233));
     color: azure;
     margin: auto;
     box-shadow: 2px 5px 10px 5px rgba(8, 46, 99, 0.988) inset;
@@ -180,14 +181,95 @@ a{
     font-weight: 600;
 }
 
+
+.about_trainers{
+    margin: auto;
+    color: azure;
+    font-family: "Pragati Narrow", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.trainer_name{
+    max-width: fit-content;
+    margin-left: 40%;
+    margin-top: 4%;
+    font-family: "Monoton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.trainer_icon_cont{
+    margin-left: 10%;
+}
+.trainer_desc{
+    padding: 5%;
+    margin-left: 2%;
+    font-weight:900;
+    font-size: 1.2em;
+    margin-top: -10%;
+}
+.trainer_list{
+    list-style: inside;
+    color: azure;
+    font-size: 1.4em;
+    margin-top: -10%;
+    padding: 7%;
+}
+.classes_cont{
+    margin-left: 7%;
+}
+.classes_header{
+    max-width: fit-content;
+}
+.trainer_list_item{
+    margin-bottom: 0;
+}
+.icons_cont{
+    display: flex;
+    gap: 5%;
+    margin-left: 40%;
+    max-height: fit-content;
+    max-width: fit-content;
+}
+.trainers{
+    border-radius: 15%;
+    background: linear-gradient(125deg, rgb(43, 96, 170), rgb(15, 57, 117), rgb(38, 120, 233));
+    box-shadow: 2px 5px 10px 5px rgba(8, 46, 99, 0.988) inset;
+    margin: auto;
+    height: fit-content;
+    width: 25vw;
+    display: flex;
+}
+.trainer_img{
+    position: absolute ;
+    margin-top: -2%;
+    height: 68vh;
+    width: 25vw;
+    border-radius: 25%;
+}
+.trainer_icon{
+    max-height: fit-content;
+    max-width: fit-content;
+    color: azure;
+    border: none;
+    border-radius: 25%;
+    transition: transform 200ms;
+    font-size: 3em;
+    background: none;
+    cursor: pointer;
+}
+
+
 /*********************** about page ***************/
 
 /*********************** gallery page ***************/
+.gallery_container{
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
 .slides_arrow_wrapper{
     text-align: center;
     display: flex;
     justify-content: center;
-    padding: 5%;
 }
 .arrow{
     color: white; 
@@ -201,14 +283,17 @@ a{
     max-height: fit-content;
     margin: auto;
 }
-.icon:hover,
-.icon:focus-visible{
+.icon:hover, .trainer_icon:hover,
+.icon:focus-visible, .trainer_icon:focus-visible{
     transform: translateY(-.75rem);
 }
 .slide_img{
     height: 70vh;
     width: 70vw;
   
+}
+.gallery_photos_title{
+    text-align: center;
 }
 /*********************** gallery page ***************/
 @media(max-width: 500px){
@@ -238,18 +323,24 @@ a{
         width: 100vw;
         height: 5vh;
         display: block;
-        position: absolute;
+        
     }
     .menu_btn{
         display: block;
     }
-    ul{
+    .main_tabs{
         margin-top: 0;
         padding: 10px;
         font-size: 1.3em;
         list-style: none;
     }
-    li{
+    .tab_list{
+        margin-top: 0;
+        padding: 10px;
+        font-size: 1.3em;
+        list-style: none;
+    }
+    .main_tab_item{
         margin-bottom: 0;
         display: inline-block;
         margin-left: 5vw;
@@ -281,15 +372,27 @@ a{
     .hours_text{
         margin-top: 25%;
     }
-    .slides_arrow_wrapper{
-        padding: 20%;
-    }
     .slide_img{
         height: 50vh;
         width: 80vw
     }
     .icon{
         font-size: 3em;
+    }
+    .trainers{
+        margin-top: 10%;
+        width: 70vw;
+        height: 60vh;
+    }
+    .trainer_img{
+        width: 40vw;
+        margin-left: -5%;
+    }
+    .icons_cont{
+        margin: auto;
+    }
+    .gallery_container{
+        margin-top: 10%;
     }
 }
 @media(max-width: 932px) and (max-height: 430px){
@@ -301,5 +404,22 @@ a{
        height: 20vh; 
        font-size: .8em;
     }
-    
+}
+@media(max-width: 1000px) and (max-height: 1024px){
+    .trainers{
+        margin-top: 5%;
+        width: 50vw;
+        height: 70vh;
+    }
+    .trainer_img{
+        width: 40vw;
+        height: 80vh;
+        
+    }
+    .icons_cont{
+        margin: auto;
+    }
+    .about_trainers{
+        flex-wrap: wrap;
+    }
 }
