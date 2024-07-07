@@ -23,7 +23,7 @@ const weightsImages = ["images/machine_room.JPG", "images/machine_room2.JPG",
                         "images/main_area5.JPG", "images/legs_area1.JPG", 
                         "images/legs_area2.JPG", "images/legs_area3.JPG", 
                         "images/nopain.JPG", "images/limitless.jpg"];
-const courtImages = ["images/court1.JPG", "images/court2.JPG"];
+const courtImages = ["images/court1.JPG", "images/court2.JPG", "images/court3.JPG"];
 const cardioImages = ["images/upstairs1.JPG", "images/stairs.JPG", 
                       "images/dont_quit.JPG", "images/dont_quit2.JPG"]
 let weightsMaxImages = (weightsImages.length - 1);
@@ -108,7 +108,7 @@ function changeAboutTab(tabNum){
 
     let overviewCont = document.getElementById("overview_cont");
     let hoursCont = document.getElementById("hours_cont");
-    let membershipCont = document.getElementById("membership_cont");
+    let membershipCont = document.getElementById("memberships");
     let trainersCont = document.getElementById("trainers_cont");
 
     if(tabNum === 0){
