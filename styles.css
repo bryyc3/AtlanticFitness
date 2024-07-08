@@ -431,13 +431,15 @@ a{
     .trainers{
         margin-top: 10%;
         width: 70vw;
-        height: 60vh;
     }
     .trainer_img{
         width: 40vw;
         margin-left: -5%;
     }
     .icons_cont{
+        margin: auto;
+    }
+    .trainer_name{
         margin: auto;
     }
     .gallery_container{
