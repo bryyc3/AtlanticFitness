@@ -318,6 +318,38 @@ a{
     text-align: center;
 }
 /*********************** gallery page ***************/
+
+/*********************** contact page ***************/
+.contact_cont{
+    display: flex;
+    max-width: fit-content;
+    text-align: center;
+    margin: auto;
+}
+.front_desk{
+    height: 60vh;
+    width: 50vw
+}
+.contact_info_cont{
+    margin: auto;
+    padding: 2vw;
+}
+.contact_heading{
+    font-size: 2.3em;
+}
+.follow_us{
+    margin-top: 10%;
+}
+.instagram_handle{
+    font-size: 1.5em;
+    margin-bottom: 10%;
+}
+.contact_icons{
+    margin: auto;
+}
+/*********************** contact page ***************/
+
+
 @media(max-width: 500px){
     .title_menu_slides_cont{
        flex-wrap:wrap;
@@ -423,6 +455,12 @@ a{
     }
     .membership_title{
         font-size: .2em;
+    }
+    .contact_cont{
+        flex-wrap: wrap;
+    }
+    .front_desk{
+        width: 100vw;
     }
 }
 @media(max-width: 932px) and (max-height: 430px){
