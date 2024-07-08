@@ -25,14 +25,22 @@ const weightsImages = ["images/machine_room.JPG", "images/machine_room2.JPG",
                         "images/nopain.JPG", "images/limitless.jpg"];
 const courtImages = ["images/court1.JPG", "images/court2.JPG", 
                      "images/court3.JPG", "images/court4.JPG"];
-const cardioImages = ["images/upstairs1.JPG", "images/stairs.JPG", 
-                      "images/dont_quit.JPG", "images/dont_quit2.JPG"]
+const cardioImages = ["images/upstairs1.JPG", "images/upstairs2.JPG",
+                      "images/upstairs3.JPG", "images/upstairs4.JPG",
+                      "images/upstairs5.JPG", "images/upstairs6.JPG",
+                      "images/upstairs7.JPG", "images/upstairs8.JPG", 
+                      "images/stairs.JPG", 
+                      "images/dont_quit.JPG", "images/dont_quit2.JPG"];
+const boxingImages = ["images/boxing1.JPG", "images/boxing2.JPG", 
+                      "images/boxing3.JPG", "images/boxing4.JPG"];
 let weightsMaxImages = (weightsImages.length - 1);
 let courtMaxImages = (courtImages.length - 1);
 let cardioMaxImages = (cardioImages.length - 1);
+let boxingMaxImages = (boxingImages.length - 1);
 let weightsSlideNum = 0;
 let courtSlideNum = 0;
-let cardioSlideNum = 0; //gallery object information 
+let cardioSlideNum = 0;
+let boxingSlideNum = 0; //gallery object information 
 
 
 const home = new Tab('href="index.html"', "images/IMG_4134.jpg", "Fitness center building", "Come Check Us Out!", "We are located at 31 Shove St, Tiverton, Rhode Island");
@@ -43,6 +51,7 @@ const contact = new Tab('href="contact.html"', "images/support.jpeg", "Contact u
 const weights = new imageDisplay(weightsImages, weightsMaxImages, weightsSlideNum);
 const cardio = new imageDisplay(cardioImages, cardioMaxImages, cardioSlideNum);
 const court = new imageDisplay(courtImages, courtMaxImages, courtSlideNum);
+const boxing = new imageDisplay(boxingImages, boxingMaxImages, boxingSlideNum);
 
 const tabs = [home, about, gallery, contact];//array of all tabs on homescreen
 let index = 0;//index for going through array
@@ -174,6 +183,10 @@ function arrowClicked(operator, id){
     if(id === "court"){
         let identifier = document.getElementById(`${id}`)
         changeSlide(operator, court, identifier);
+    }
+    if(id === "boxing"){
+        let identifier = document.getElementById(`${id}`)
+        changeSlide(operator, boxing, identifier);
     }
 }//when arrow is clicked, determine which set of arrows was clicked 
  //send content specific info to the function that will change to the next img 
