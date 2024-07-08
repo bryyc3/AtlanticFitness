@@ -350,6 +350,62 @@ a{
 /*********************** contact page ***************/
 
 
+@media(max-width: 1000px) and (max-height: 1024px){
+    .trainers{
+        margin-top: 5%;
+        width: 50vw;
+        
+    }
+    .trainer_img{
+        width: 40vw;
+        height: 60vh;
+    }
+    .icons_cont{
+        margin: auto;
+        
+    }
+    .trainer_icon{
+        font-size: 2em;
+    }
+    .about_trainers{
+        flex-wrap: wrap;
+    }
+    .trainer_desc{
+        font-size: 1em;
+    }
+    .trainer_list{
+        font-size: 1em;
+    }
+    .about_memberships{
+        flex-wrap: wrap;
+    }
+    .membership_title{
+        font-size: 2em;
+    }
+    .membership_cost{
+        font-size: 1.5em;
+    }
+}
+
+
+@media(max-width: 932px) and (max-height: 430px){
+    .popout_menu{
+        margin-left: auto;
+        height: 150vh;
+    }
+    .tab_menu{
+       height: 20vh; 
+       font-size: .8em;
+    }
+    .trainer_img{
+        width: 40vw;
+        height: 100vh;
+        margin-left: 2%;
+    }
+}
+
+
+
 @media(max-width: 500px){
     .title_menu_slides_cont{
        flex-wrap:wrap;
@@ -430,11 +486,13 @@ a{
     }
     .trainers{
         margin-top: 10%;
-        width: 70vw;
+        width: 60vw;
     }
     .trainer_img{
         width: 40vw;
+        height: 55vh;
         margin-left: -5%;
+        margin-top: -5%;
     }
     .icons_cont{
         margin: auto;
@@ -463,42 +521,5 @@ a{
     }
     .front_desk{
         width: 100vw;
-    }
-}
-@media(max-width: 932px) and (max-height: 430px){
-    .popout_menu{
-        margin-left: auto;
-        height: 150vh;
-    }
-    .tab_menu{
-       height: 20vh; 
-       font-size: .8em;
-    }
-}
-@media(max-width: 1000px) and (max-height: 1024px){
-    .trainers{
-        margin-top: 5%;
-        width: 50vw;
-        height: 70vh;
-    }
-    .trainer_img{
-        width: 40vw;
-        height: 80vh;
-        
-    }
-    .icons_cont{
-        margin: auto;
-    }
-    .about_trainers{
-        flex-wrap: wrap;
-    }
-    .about_memberships{
-        flex-wrap: wrap;
-    }
-    .membership_title{
-        font-size: 2em;
-    }
-    .membership_cost{
-        font-size: 1.5em;
     }
 }
