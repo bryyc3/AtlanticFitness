@@ -200,10 +200,9 @@ a{
     font-family: "Libre Bodoni", serif;
     font-size: 3em;
 }
-
-
 .silver_snkrs_learn{
     margin-top: 10%;
+    font-size: 1.5em;
 }
 .about_trainers{
     margin: auto;
@@ -216,14 +215,16 @@ a{
 }
 .trainer_name{
     max-width: fit-content;
-    margin-left: 30%;
+    margin-left: 15%;
     margin-top: 4%;
     font-family: "Frijole", sans-serif;
     font-weight: 400;
     font-style: normal;
+    font-size: 3.5em;
 }
 .trainer_icon_cont{
-    margin-left: 10%;
+    max-width: fit-content;
+    
 }
 .trainer_desc{
     padding: 5%;
@@ -235,7 +236,7 @@ a{
 .trainer_list{
     list-style: inside;
     color: azure;
-    font-size: 1.4em;
+    font-size: 1.2em;
     margin-top: -10%;
     padding: 7%;
 }
@@ -262,11 +263,13 @@ a{
     display: flex;
 }
 .trainer_img{
-    position: absolute ;
-    margin-top: -2%;
-    height: 68vh;
-    width: 25vw;
-    border-radius: 25%;
+    position: absolute;
+    height: 50vh;
+    width: 15vw;
+    
+}
+.lisa_heading{
+    margin-left: 37%;
 }
 .trainer_icon{
     max-height: fit-content;
@@ -357,8 +360,13 @@ a{
         
     }
     .trainer_img{
-        width: 40vw;
-        height: 60vh;
+        margin-top: 2%;
+        width: 25vw;
+        height: 45vh;
+    }
+    .lisa_img{
+        margin-left: 5%;
+        height: 50vh;
     }
     .icons_cont{
         margin: auto;
@@ -489,16 +497,23 @@ a{
         width: 60vw;
     }
     .trainer_img{
-        width: 40vw;
-        height: 45vh;
+        width: 30vw;
+        height: 50vh;
         margin-left: -5%;
-        margin-top: -5%;
+        
     }
     .icons_cont{
         margin: auto;
     }
     .trainer_name{
         margin: auto;
+    }
+    .lisa_img{
+        margin-top: -1%;
+    }
+    .sheila_heading{
+        font-size: 2.5em;
+        margin-left: 10%;
     }
     .gallery_container{
         margin-top: 10%;
@@ -512,9 +527,6 @@ a{
     .membership{
         margin-top: 25%;
         width: 70vw;
-    }
-    .membership_title{
-        font-size: .2em;
     }
     .contact_cont{
         flex-wrap: wrap;
