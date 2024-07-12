@@ -10,22 +10,21 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Frijole&family=League+Spartan:wght@100..900&family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&family=Lustria&family=Pragati+Narrow:wght@400;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>  
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">  
         <link rel="shortcut icon" type="image/PNG" href="/images/logo.PNG">
         <link rel="stylesheet" href="styles.css">
         <script src="script.js"></script>
     </head>
     <body>
-        <main>
-            <div class="popout_menu tab_menu background" id="menu">
-                <ul class="tab_list">
-                    <li class="tab_item"><a href="index.html" class="tab" id="0">Home</a></li>
-                    <li class="tab_item"><a href="about.html" class="tab underline" id="1">About Us</a></li>
-                    <li class="tab_item"><a href="gallery.html" class="tab" id="2">Gallery</a></li>
-                    <li class="tab_item"><a href="contact.html" class="tab" id="3">Contact</a></li>
-                </ul>
-            </div>
-            <body>
+        <div class="popout_menu tab_menu background" id="menu">
+            <ul class="tab_list">
+                <li class="tab_item"><a href="index.html" class="tab" id="0">Home</a></li>
+                <li class="tab_item"><a href="about.html" class="tab underline" id="1">About Us</a></li>
+                <li class="tab_item"><a href="gallery.html" class="tab" id="2">Gallery</a></li>
+                <li class="tab_item"><a href="contact.html" class="tab" id="3">Contact</a></li>
+            </ul>
+        </div>
+            <main>
                 <div class="about_main_content active" id="overview_cont">
                     <img src="images/building.png" alt="Atlantic Fitness building" class="atlantic_building">
                     <p class="overview background">
@@ -95,12 +94,12 @@
                                 </ul>
                             </div>
                             <div class="icons_cont">
-                                <a href="https://www.instagram.com/bodybysheila?igsh=N28xZmRpY2FuZG5p"><button class = "material-symbols-outlined trainer_icon" onclick="arrowClicked('-')">photo_camera</button></a>
-                                <a href="tel:774-451-3197"><button class = "material-symbols-outlined trainer_icon" onclick="arrowClicked('-')">call</button></a>
+                                <a class = "material-symbols-outlined trainer_icon" href="https://www.instagram.com/bodybysheila?igsh=N28xZmRpY2FuZG5p">photo_camera</a>
+                                <a class = "material-symbols-outlined trainer_icon" href="tel:774-451-3197">call</a>
                             </div>
                         </div>
                         <div>
-                            <img src="images/sheila.PNG" alt="Atlantic Fitness building" class="trainer_img sheila_img">
+                            <img src="images/sheila.PNG" alt="Sheila personal trainer" class="trainer_img sheila_img">
                         </div>
                     </div>
                     <div class="trainers background">
@@ -117,13 +116,13 @@
                                 </ul>
                             </div>
                             <div class="icons_cont">
-                                <a href="https://www.instagram.com/warriorhiitfit?igsh=cDNsNGtjcDI5NmF1"><button class = "material-symbols-outlined trainer_icon" onclick="arrowClicked('-')">photo_camera</button></a>
-                                <a href="mailto: @warriorhiitfit@gmail.com"><button class = "material-symbols-outlined trainer_icon" onclick="arrowClicked('-')">mail</button></a>
-                                <a href="tel:508-901-7225"><button class = "material-symbols-outlined trainer_icon" onclick="arrowClicked('-')">call</button></a>
+                                <a class = "material-symbols-outlined trainer_icon" href="https://www.instagram.com/warriorhiitfit?igsh=cDNsNGtjcDI5NmF1">photo_camera</a>
+                                <a class = "material-symbols-outlined trainer_icon" href="mailto:warriorhiitfit@gmail.com">mail</a>
+                                <a class = "material-symbols-outlined trainer_icon" href="tel:508-901-7225">call</a>
                             </div>
                         </div>
                         <div>
-                            <img src="images/lisa.PNG" alt="Atlantic Fitness building" class="trainer_img lisa_img">
+                            <img src="images/lisa.PNG" alt="Lisa personal trainer" class="trainer_img lisa_img">
                         </div>
                     </div>
                 </div>
@@ -133,7 +132,6 @@
                     <li class="tab_item"><button class="tab tab_btn" id="membership" onclick="changeAboutTab(2)">Membership Info</button></li>
                     <li class="tab_item"><button class="tab tab_btn" id="trainers" onclick="changeAboutTab(3)">Trainers and Classes</button></li>
                 </ul>
-            </body>
         </main>
     </body>
 </html>
