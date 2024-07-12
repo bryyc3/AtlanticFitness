@@ -65,21 +65,17 @@ function slidesCycle(){
     if (index == 0){
         slides.innerHTML += 
         `<div class ="fade_in" id = "slideElements">
-        <a href="${tabs[index].href}">
          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2980.2586697601146!2d-71.1845076598009!3d41.6717566713848!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e4ff5b3e894021%3A0x3bd4087ccb98b52b!2sAtlantic%20Fitness!5e0!3m2!1sen!2sus!4v1719764646898!5m2!1sen!2sus" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade" class="google_map"></iframe>
         <h3>${tabs[index].header}</h3>
         <p class="preview_desc">${tabs[index].description}</p>
-        </a>
         </div>`;
     }
     else{
         slides.innerHTML += 
         `<div class ="fade_in" id = "slideElements">
-            <a href="${tabs[index].href}">
             <img src="${tabs[index].src}" alt="${tabs[index].alt}" class="gympic">
             <h3>${tabs[index].header}</h3>
             <p class="preview_desc">${tabs[index].description}</p>
-            </a>
         </div>`;
     }
 }//create slides associated with specific tab and display it
