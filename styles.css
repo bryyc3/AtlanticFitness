@@ -1,84 +1,105 @@
 *,
 * ::before,
-*::after{
+*::after {
     box-sizing: border-box;
 }
-*{
+
+* {
     margin: 0px;
-    padding:0px;
+    padding: 0px;
 }
-html{
+
+html {
     background-image: url("images/gymbackground.png.PNG");
 }
-.background{
+
+.background {
     background: linear-gradient(125deg, rgb(43, 96, 170), rgb(15, 57, 117), rgb(38, 120, 233));
     color: azure;
     margin: auto;
     box-shadow: 2px 5px 10px 5px rgba(8, 46, 99, 0.988) inset;
 }
-.title_menu_slides_cont{
+
+.title_menu_slides_cont {
     display: flex;
 }
-.machines_background{
+
+.machines_background {
     padding-top: 150px;
     padding-left: 30px;
     padding-right: 30px;
 }
 
-.logo{
+.logo {
     height: 170px;
 }
-.atlantic_text{
+
+.atlantic_text {
     display: inline;
-    
+
 }
-h1{
+
+h1 {
     font-family: "League Spartan", sans-serif;
     font-weight: 700;
     font-size: 4em;
     color: azure;
 }
-.fitness_title{
+
+.fitness_title {
     margin-left: 200px;
 }
-h2{
+
+h2 {
     font-family: "Lustria", serif;
     font-weight: 200;
     font-size: 2em;
     color: azure;
 }
+
 @keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
-.fade_in{ 
-    animation: fadeIn 3s; 
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
+
+.fade_in {
+    animation: fadeIn 3s;
+}
+
 /********************* menu*********************/
-.popout_menu{
+.popout_menu {
     height: 100vh;
     width: 225px;
     text-align: center;
     margin-left: -20px;
 }
-.tab_menu{
+
+.tab_menu {
     margin: auto;
     width: 100vw;
     height: 10vh;
 }
-.tab_list{
+
+.tab_list {
     margin-top: 0;
     padding: 10px;
     list-style: none;
     font-size: 2.8em;
     white-space: nowrap;
 }
-.tab_item{
+
+.tab_item {
     display: inline;
     margin-left: 5vw;
     position: relative;
 }
-.tab_btn{
+
+.tab_btn {
     border: none;
     background: none;
     color: azure;
@@ -89,17 +110,19 @@ h2{
     position: relative;
 }
 
-.main_tabs{
+.main_tabs {
     font-size: 2.8em;
     padding: 30px;
     list-style: none;
     margin-top: 70%;
     white-space: nowrap;
 }
-.main_tab_item{
+
+.main_tab_item {
     margin-bottom: 40px;
 }
-a{
+
+a {
     text-decoration: none;
     color: azure;
     position: relative;
@@ -118,38 +141,47 @@ a{
     transition: opacity 300ms, transform 300ms;
     transform: scale(0);
     transform-origin: center;
-  }
-.tab:hover::after, .tab:focus::after{
+}
+
+.tab:hover::after,
+.tab:focus::after {
     transform: scale(1);
 }
-.tab_active::after, .underline::after{
+
+.tab_active::after,
+.underline::after {
     transform: scale(1);
 }
+
 /********************* menu*********************/
 
 
 
-.slideshow{
+.slideshow {
     margin-top: 70px;
     text-align: center;
     color: azure;
     padding: 50px;
 }
-.gympic, .google_map{
+
+.gympic,
+.google_map {
     height: 50vh;
     width: 40vw;
     margin: auto;
 }
 
 /*********************** about page ***************/
-.about_item{
+.about_item {
     font-size: .47em;
 }
-.about_main_content{
+
+.about_main_content {
     padding: 2%;
     display: none;
 }
-.hours_details{
+
+.hours_details {
     color: azure;
     font-size: 1em;
     text-align: center;
@@ -157,22 +189,27 @@ a{
     margin-top: 15%;
     margin-bottom: 15%;
 }
-.hours_text{
-    margin:auto;
+
+.hours_text {
+    margin: auto;
 }
-.active{
-    display:flex;
+
+.active {
+    display: flex;
 }
-.atlantic_building{
+
+.atlantic_building {
     height: 72vh;
     width: 50vw;
 }
-.overview{
+
+.overview {
     padding: 20px;
     font-size: 1.2em;
     font-weight: 200;
 }
-.about_tabs{
+
+.about_tabs {
     text-align: center;
     font-size: 2em;
     padding: none;
@@ -182,29 +219,34 @@ a{
     font-weight: 600;
 }
 
-.membership{
+.membership {
     width: 40vw;
     height: 50vh;
     text-align: center;
     margin-top: 10%;
 }
-.membership_img{
+
+.membership_img {
     margin-top: -30%;
-    height: 20vh;
-    width: 15vw;
+    height: 200px;
+    width: 200px;
 }
-.membership_desc{
+
+.membership_desc {
     margin-top: 15%;
 }
-.membership_title{
+
+.membership_title {
     font-family: "Libre Bodoni", serif;
     font-size: 3em;
 }
-.silver_snkrs_learn{
+
+.silver_snkrs_learn {
     margin-top: 10%;
     font-size: 1.5em;
 }
-.about_trainers{
+
+.about_trainers {
     margin: auto;
     color: azure;
     font-family: "Pragati Narrow", sans-serif;
@@ -213,7 +255,8 @@ a{
     margin-top: 3%;
     margin-bottom: 7%;
 }
-.trainer_name{
+
+.trainer_name {
     max-width: fit-content;
     margin-left: 15%;
     margin-top: 4%;
@@ -222,56 +265,67 @@ a{
     font-style: normal;
     font-size: 3.5em;
 }
-.trainer_icon_cont{
+
+.trainer_icon_cont {
     max-width: fit-content;
-    
+
 }
-.trainer_desc{
+
+.trainer_desc {
     padding: 5%;
     margin-left: 2%;
-    font-weight:900;
+    font-weight: 900;
     font-size: 1.2em;
     margin-top: -10%;
 }
-.trainer_list{
+
+.trainer_list {
     list-style: inside;
     color: azure;
     font-size: 1.2em;
     margin-top: -10%;
     padding: 7%;
 }
-.classes_cont{
+
+.classes_cont {
     margin-left: 7%;
 }
-.classes_header{
+
+.classes_header {
     max-width: fit-content;
 }
-.trainer_list_item{
+
+.trainer_list_item {
     margin-bottom: 0;
 }
-.icons_cont{
+
+.icons_cont {
     display: flex;
     gap: 5%;
     margin-left: 40%;
     max-height: fit-content;
     max-width: fit-content;
 }
-.trainers{
+
+.trainers {
     border-radius: 15%;
     height: fit-content;
     width: 25vw;
     display: flex;
 }
-.trainer_img{
+
+.trainer_img {
     position: absolute;
     height: 50vh;
     width: 15vw;
-    
+
 }
-.lisa_heading{
+
+.lisa_heading {
     margin-left: 37%;
 }
-.trainer_icon{
+
+.trainer_icon {
     max-height: fit-content;
     max-width: fit-content;
     color: azure;
@@ -287,20 +341,23 @@ a{
 /*********************** about page ***************/
 
 /*********************** gallery page ***************/
-.gallery_container{
+.gallery_container {
     margin-top: 2%;
     margin-bottom: 3%;
 }
-.slides_arrow_wrapper{
+
+.slides_arrow_wrapper {
     text-align: center;
     display: flex;
     justify-content: center;
 }
-.arrow{
-    color: white; 
+
+.arrow {
+    color: white;
     font-size: 5em;
 }
-.icon{
+
+.icon {
     border: none;
     background: none;
     cursor: pointer;
@@ -308,104 +365,133 @@ a{
     max-height: fit-content;
     margin: auto;
 }
-.icon:hover, .trainer_icon:hover,
-.icon:focus-visible, .trainer_icon:focus-visible{
+
+.icon:hover,
+.trainer_icon:hover,
+.icon:focus-visible,
+.trainer_icon:focus-visible {
     transform: translateY(-.75rem);
 }
-.slide_img{
+
+.slide_img {
     height: 70vh;
     width: 70vw;
-  
+
 }
-.gallery_photos_title{
+
+.gallery_photos_title {
     text-align: center;
 }
+
 /*********************** gallery page ***************/
 
 /*********************** contact page ***************/
-.contact_cont{
+.contact_cont {
     display: flex;
     max-width: fit-content;
     text-align: center;
     margin: auto;
 }
-.front_desk{
+
+.front_desk {
     height: 60vh;
     width: 50vw
 }
-.contact_info_cont{
+
+.contact_info_cont {
     margin: auto;
     padding: 2vw;
 }
-.contact_heading{
+
+.contact_heading {
     font-size: 2.3em;
 }
-.follow_us{
+
+.follow_us {
     margin-top: 10%;
 }
-.instagram_handle{
+
+.instagram_handle {
     font-size: 1.5em;
     margin-bottom: 10%;
 }
-.contact_icons{
+
+.contact_icons {
     margin: auto;
 }
+
 /*********************** contact page ***************/
 
 
-@media(max-width: 1000px) and (max-height: 1024px){
-    .trainers{
+@media(max-width: 1000px) and (max-height: 1024px) {
+    .trainers {
         margin-top: 5%;
         width: 50vw;
-        
+
     }
-    .trainer_img{
+
+    .trainer_img {
         margin-top: 2%;
         width: 25vw;
         height: 45vh;
     }
-    .lisa_img{
+
+    .lisa_img {
         margin-left: 5%;
         height: 50vh;
     }
-    .icons_cont{
+
+    .icons_cont {
         margin: auto;
-        
+
     }
-    .trainer_icon{
+
+    .trainer_icon {
         font-size: 2em;
     }
-    .about_trainers{
+
+    .about_trainers {
         flex-wrap: wrap;
     }
-    .trainer_desc{
+
+    .trainer_desc {
         font-size: 1em;
     }
-    .trainer_list{
+
+    .trainer_list {
         font-size: 1em;
     }
-    .about_memberships{
+
+    .about_memberships {
         flex-wrap: wrap;
     }
-    .membership_title{
+
+    .membership {
+        margin-bottom: 50px;
+    }
+
+    .membership_title {
         font-size: 2em;
     }
-    .membership_cost{
+
+    .membership_cost {
         font-size: 1.5em;
     }
 }
 
 
-@media(max-width: 932px) and (max-height: 430px){
-    .popout_menu{
+@media(max-width: 932px) and (max-height: 430px) {
+    .popout_menu {
         margin-left: auto;
         height: 150vh;
     }
-    .tab_menu{
-       height: 20vh; 
-       font-size: .8em;
+
+    .tab_menu {
+        height: 20vh;
+        font-size: .8em;
     }
-    .trainer_img{
+
+    .trainer_img {
         width: 40vw;
         height: 100vh;
         margin-left: 2%;
@@ -414,129 +500,160 @@ a{
 
 
 
-@media(max-width: 500px){
-    .title_menu_slides_cont{
-       flex-wrap:wrap;
+@media(max-width: 500px) {
+    .title_menu_slides_cont {
+        flex-wrap: wrap;
     }
-    .machines_background{
+
+    .machines_background {
         margin-top: 10px;
         padding: 50px;
         max-height: fit-content;
     }
-    .logo{
-        height:80px;
+
+    .logo {
+        height: 80px;
     }
-    h1{
+
+    h1 {
         font-size: 2.5em;
     }
-    .fitness_title{
+
+    .fitness_title {
         margin-left: 120px;
     }
-    h2{
+
+    h2 {
         font-size: 1.3em;
     }
-    .popout_menu{
+
+    .popout_menu {
         margin-left: auto;
         width: 100vw;
         height: 40px;
         display: block;
     }
-    .main_tabs{
+
+    .main_tabs {
         margin-top: 0;
         padding: 10px;
         font-size: 1.3em;
         list-style: none;
     }
-    .tab_list{
+
+    .tab_list {
         margin-top: 0;
         padding: 10px;
         font-size: 1.3em;
         list-style: none;
     }
-    .main_tab_item{
+
+    .main_tab_item {
         margin-bottom: 0;
         display: inline-block;
         margin-left: 5vw;
     }
-    .slideshow{
+
+    .slideshow {
         padding: 10px;
         margin-top: 0;
     }
-    .gympic, .google_map{
+
+    .gympic,
+    .google_map {
         height: 30vh;
         width: 80vw;
         margin-bottom: 30px;
     }
-    .about_main_content{
+
+    .about_main_content {
         flex-wrap: wrap;
     }
-    .atlantic_building{
+
+    .atlantic_building {
         width: 100%;
         height: 400px;
     }
-    .about_tabs{
+
+    .about_tabs {
         margin-top: 0;
         padding: 0px;
         font-size: 1.3em;
     }
-    .tab_btn{
+
+    .tab_btn {
         display: block;
         max-width: fit-content;
     }
-    .hours_text{
+
+    .hours_text {
         margin-top: 25%;
     }
-    .slide_img{
+
+    .slide_img {
         height: 300px;
         width: 300px;
     }
-    .icon{
+
+    .icon {
         font-size: 3em;
     }
-    .trainers{
+
+    .trainers {
         margin-top: 10%;
         width: 60vw;
     }
-    .trainer_img{
+
+    .trainer_img {
         width: 200px;
         height: 350px;
         margin-left: -5%;
-        
+
     }
-    .icons_cont{
+
+    .icons_cont {
         margin: auto;
     }
-    .trainer_name{
+
+    .trainer_name {
         margin: auto;
     }
-    .lisa_img{
+
+    .lisa_img {
         margin-top: -1%;
     }
-    .sheila_heading{
+
+    .sheila_heading {
         font-size: 2.5em;
         margin-left: 10%;
     }
-    .gallery_container{
+
+    .gallery_container {
         margin-top: 10%;
     }
-    .about_memberships{
+
+    .about_memberships {
         flex-wrap: wrap;
     }
-    .membership_img{
+
+    .membership_img {
         width: 140px;
         height: 150px;
     }
-    .membership{
+
+    .membership {
         margin-top: 25%;
         width: 270px;
         height: 370px;
     }
-    .contact_cont{
+
+    .contact_cont {
         flex-wrap: wrap;
         margin-top: 8%;
         padding: 12px;
     }
-    .front_desk{
+
+    .front_desk {
         width: 100%;
         height: 300px;
     }
