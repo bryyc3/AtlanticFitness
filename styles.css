@@ -421,7 +421,14 @@ a {
 }
 
 /*********************** contact page ***************/
-
+@media(max-width: 900px){
+    .about_main_content{
+        flex-wrap: wrap;
+    }
+    .atlantic_building{
+        width: 100%;
+    }
+}
 
 @media(max-width: 1000px) and (max-height: 1024px) {
     .trainers {
