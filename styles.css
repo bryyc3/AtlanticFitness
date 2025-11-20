@@ -32,6 +32,7 @@ html {
 
 .logo {
     height: 170px;
+    padding-bottom: 10px;
 }
 
 .atlantic_text {
@@ -205,8 +206,21 @@ a {
 
 .overview {
     padding: 20px;
+    overflow-y: auto;
+    height: 72vh;
+}
+
+.overview_title{
+    font-size: 1.7em;
+}
+
+.overview_paragraph{
     font-size: 1.2em;
     font-weight: 200;
+}
+
+.overview_list{
+    padding-left: 35px;
 }
 
 .about_tabs {
